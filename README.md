@@ -85,7 +85,7 @@ TO DO: simplify by removing the url_1/url_2 and referer_1/referer_2 by looking a
 
 explanations:
 * platform: platform associated witht these json, in this case this scraping engine is for Shopee
-* referer: the main first-page URL to be scrapped. the format should be shopee.(domain)/search?facet=(id) for category searches or shopee.(domain)/search?keyword=(id) for keyword searches. You can also add how the items are listed by adding '&sortBy=relevancy', '&sortBy=ctime', or '&sortBy=sales' to the referrer, however for most intents and purposes the sortBy=sales is the one you need  and is the standard one if none are given.
+* referer: the main first-page URL to be scrapped. the format should be shopee.(domain)/search?facet=(id)&page=0 for category searches or shopee.(domain)/search?keyword=(id)&page=0 for keyword searches (shopee pages start from 0). You can also add how the items are listed by adding '&sortBy=relevancy', '&sortBy=ctime', or '&sortBy=sales' to the referrer, however for most intents and purposes the sortBy=sales is the one you need  and is the standard one if none are given.
 * name: the name of the engine that you want, preferably it is unique and contains the name of the things to be scrapped and their corresponding regions and their platform
 * max_page: the maximum page that you want to scrap, for Shopee the amount of max page scrappable is from 1 page to 160 pages
 * category, subcategory, and subsubcategory: the corresponding categories for the items inside the URL
