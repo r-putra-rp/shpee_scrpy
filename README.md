@@ -1,8 +1,5 @@
 # shpee_scrpy
 
-# scraping
-
-for scrape-code
 
 # How to Run
 There are two ways to run the code, either by running the shopee_environ.py or the shopee_arg.py. The former accept environment variables as arguments (with an example within), the latter used a command argument
