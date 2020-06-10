@@ -57,10 +57,16 @@ def shopee_run(params_arg):
 
         try:
             referer = params['items'][i]['referer']
-            if 'page' not in referer:
+            if 'page=' not in referer:
                 referer = referer + '&page=__pagenum__'
-            else:
-                re.sub('sortBy\=.*?','sortBy=sales', referer, flags=re.DOTALL)
+            elif re.sub('page\=(.*?)\&','page=__pagenum__', referer, flags=re.DOTALL) != referer:
+                referer = re.sub('page\=(.*?)\&','page=__pagenum__&', referer, flags=re.DOTALL)
+                
+            elif re.sub('page\=..','page=__pagenum__', referer, flags=re.DOTALL) != referer:
+                referer = re.sub('page\=..','page=__pagenum__', referer, flags=re.DOTALL)
+                
+            elif re.sub('page\=.','page=__pagenum__', referer, flags=re.DOTALL) != referer:
+                referer = re.sub('page\=.','page=__pagenum__', referer, flags=re.DOTALL)
         
             #if 'sortBy'not in referer:
             #if 'sortBy' in referer:
