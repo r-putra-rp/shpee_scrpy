@@ -1,7 +1,6 @@
 import os
 #import pprint 
 import shopee_run
-import cleaning
 import ast
 import re
 #for testing purposes, the environment variables are stated here
