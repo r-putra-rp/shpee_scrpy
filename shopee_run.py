@@ -11,7 +11,7 @@ from sqlalchemy import create_engine #sqlalchemy ver 1.3.13
 from multiprocessing import Process
 from multiprocessing import Pool  
 import pandas as pd
-from cleaning import parallel_clean
+
 
 
 def shopee_run(params_arg):
